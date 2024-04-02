@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magic Menu Indicator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#"><span class="icon"><!-- <ion-icon name="home-outline"></ion-icon> --><img src="home-outline.svg" width="26px;"></span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#profile"><span class="icon"><!-- <ion-icon name="person-outline"></ion-icon> --><img src="person-outline.svg" width="26px;"></span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#create"><span class="icon"><!-- <ion-icon name="chatbubble-outline"></ion-icon> --> <img src="add-outline.svg" width="25px;"></span>
+          <span class="text">Create</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#join"><span class="icon"><!-- <ion-icon name="camera-outline"></ion-icon> --><img src="link-outline.svg" width="26px;"></span>
+          <span class="text">Join</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#settings"><span class="icon"><!-- <ion-icon name="settings-outline"></ion-icon> --><img src="settings-outline.svg" width="25px;"></span>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <div class="indicator">
+
+      </div>
+    </ul>
+  </div>
+  
+  
+  
+  
+  <section class='homepage'>
+    <div class="uppper">
+      <h2>-> Hello <span class='user_name'>Alok ,</span></h2>
+      <p>Welcome to the world of joy and fun games online. Note:- This API data is provided from your recent room to view the latest or join a room <a class='api_room'href="#create  ">generate an API.</a></p>
+    </div>
+    
+    <div class="middle">
+      <h2 class="api">-> Your API: <code>f730F9IHY2d8</code></h2>
+      <p>&bull; Your API is currently active on the server. You can now share it.<br><br></p>
+          <box>
+            f730F9IHY2d8 
+            <img src="/copy-outline.svg" class='copy'width="30px;">
+          </box>
+          
+          
+          
+      <h2 class='members'>
+        -> Members of your Room
+      </h2>
+      <ul class='mem'>
+        <li class='mem'>Khushi</li>
+        <li class='mem'>Lucky</li>
+        <li class='mem'>Gyan</li>
+        <li class='mem'>Happy</li>
+        <li class='mem'>Alok(You)</li>
+      </ul>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  <section class='profile' id='profile'>
+    <div class="user">
+      <div class="imgDiv"></div>
+      <div class='name_text'>
+      <h2 class="name">Alok Choubey</h2>
+      <p>Edit your info as Needed.</p>
+      </div>
+    </div>
+    <ul class='your_info'>
+      <li class="info">Your Username: <span class='user_name'></span></li>
+      <li class="info">Your Email: <span class="email"></span></li>
+      <li class="info">Your Password: Not visible to people</li>
+    </ul>
+    <h2 class='text2'>Click the button to edit your info</h2>
+    <div class="edit">
+      <select id="change_value">
+        <option value="Username">Username</option>
+        <option value="Email">Email</option>
+        <option value="Password">Password</option>
+      </select>
+      <button class='select'>Select</button></div>
+  </section>
+  
+  
+  
+  <section class="create" id='create'>
+    <h2>Generate An API or connect to a room.</h2>
+    <div class="information_generate">
+      <h2 style='margin-top: 10px;margin-bottom: 10px;'><center>Generate Room API</center></h2>
+      <input type="text" id="room_name" placeholder='Room Name'>
+      <input type="text" id='apiContainer' placeholder='Click "Generate API" '>
+      <button id='generate'>Generate API</button>
+    </div>
+    <div class="room_info">
+      <h2 style='font-weight: 500; margin-top: 20px; color: greenyellow; text-shadow: 0 0 15px greenyellow;'>The API has been successfully generated for the room <span class='room_name'>room_name</span></h2>
+    </div>
+  </section>
+  
+  
+  
+  <section class="join" id='join'>
+    <div class="enter_api">
+      <h2 class='enter h2'>Enter the API to join a room.</h2>
+      <input type="text" id='userEnteredAPI' placeholder="Enter the API">
+      <button id='matchAPI'>Continue</button>
+    </div>
+    <div class="confirmation">
+      <h2 class='info h2' style='margin-top: 15px;'>The API you entered will take you to the room <span class='room_name' style='color: greenyellow; text-shadow: 0 0 15px greenyellow'>room name</span>. Would you like to continue ?</h2>
+      <button id='continue'>Continue</button>
+      <button id='cancel'>Cancel</button>
+    </div>
+  </section>
+  
+  
+  
+  <section class="settings" id='settings'>
+    <h2>Profile Related Settings</h2>
+    <div class="profile">
+      <div class="profileDiv"></div>
+      <div class="name">
+        <h2>Alok Choubey</h2>
+        <p>Manage your Profile </p>
+      </div>
+      <img src="arrow-forward-outline.svg" width='35px;'>
+    </div>
+    
+    <h2 style='margin-top: 20px; margin-bottom: 20px;'>Website Related Settings</h2>
+    <ul>
+      <li>Mode <span>Dark(Default)</span></li>
+      <li>Notificatins <span>Denied</span></li>
+      <li>Camera <span>Denied</span></li>
+      <li>Storage <span>Denied</span></li>
+      <li>Location <span>Denied</span></li>
+    </ul>
+  </section>
+  
+  
+  <div class="success_alert">
+    <span class="main_icon">
+      <img src="checkmark-done-circle-sharp.svg" class='done'>
+    </span>
+    <span class="alert_text">
+      Successfully Performed Task.
+    </span>
+    <span class='close_span'>
+      <img src="/close-outline.svg" class='close'>
+    </span>
+  </div>
+  
+  
+</body>
+<script>
+  const list = document.querySelectorAll('.list');
+
+  function activeLink() {
+    list.forEach((item) => item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach((item) => item.addEventListener('click', activeLink));
+  
+</script>
+
+
+<script src='https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js'></script>
+
+<script src="main.js"></script>
+<!-- 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script module src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+
+</html>

@@ -1,0 +1,525 @@
+/* @import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900); */
+
+@font-face{
+  src: url("/Poppins-Regular.ttf");
+  font-family: poppins;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* font-weight: bold; */
+}
+
+:root {
+  --clr: #222327;
+}
+
+body {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* min-height: 100vh; */
+  background: var(--clr);
+  /* margin-top: 200px; */
+}
+
+.navigation {
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  position: fixed;
+  bottom: 10px;
+  margin-left: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 73px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  /* color: #E41B17; */
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(-40px);
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  /* color: #E41B17; */
+  /* font-weight: bold; */
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: #29fd53;
+  border-radius: 50%;
+  border: 6px solid var(--clr);
+  transition: 0.5s;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 var(--clr);
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active~.indicator {
+  transform: translateX(calc(70px*0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+  transform: translateX(calc(70px*1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+  transform: translateX(calc(70px*2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+  transform: translateX(calc(70px*3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+  transform: translateX(calc(70px*4));
+}
+
+
+
+
+
+/* adding code for the homepage section */
+
+section.homepage{
+  padding: 20px;
+  color: white;
+  height: calc(fit-content + 10vh);
+  transition: all 1s;
+  /* display: none; */
+}
+
+section.homepage p{
+  margin-top: 5px;
+}
+
+section.homepage span{
+  background: linear-gradient(45deg,#f06,#3cf);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: none;
+  text-shadow: 0 0 20px #f06, 5px -5px 20px #3cf;
+}
+
+section.homepage h2{
+  text-shadow: 0 0 15px white;
+}
+
+div.middle{
+  margin-top: 10px;
+}
+
+div.middle h2{
+  color: #FFE808;
+  text-shadow: 0 0 15px #FFE808;
+}
+
+box{
+  padding: 15px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px white;
+  letter-spacing: 1px;
+}
+
+code{
+  padding: 6px;
+}
+
+h2.members{
+  margin-top: 20px;
+}
+
+ul.mem{
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+}
+
+li.mem{
+  list-style: none;
+  padding: 15px;
+  border: 2px solid white;
+  box-shadow: 0 0 20px white;
+  border-radius: 5px;
+  background: #fff;
+  color: black;
+}
+
+a.api_room{
+  color: aqua;
+}
+
+a{
+  transition: 1s ease-in-out;
+}
+
+section{
+  scroll-behavior: smooth;
+  transition: all 1s; 
+}
+
+
+/* adding css code for profile section */
+
+section.profile{
+  padding: 20px;
+  height: 100vh;
+  /* display: none; */
+  transition: all 1s;
+}
+
+div.user .imgDiv{
+  border: 2px solid #fff;
+  padding: 0px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+div.user{
+  display: flex;
+  gap: 20px;
+}
+
+div.user h2{
+  color: white;
+  text-shadow: 0 0 15px white;
+}
+
+section.profile ul{
+  padding: 20px;
+  color: white;
+}
+
+.your_info li.info{
+  padding: 10px;
+  border: 1.5px solid white;
+  list-style: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.text2{
+  color: white;
+  text-shadow: 0 0 15px white;
+}
+
+.name_text{
+  display: flex;
+  flex-direction: column;
+}
+
+.name_text p{
+  color: white;
+  text-shadow: 0 0 15px white;
+}
+
+select{
+  padding: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 20px white;
+  background: #000;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.select{
+  padding: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 20px white;
+  background: #000;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.select:active{
+  background: #fff;
+  color: black;
+}
+
+/* adding css code for the section of create */
+
+section.create{
+  padding: 20px;
+  color: white;
+  text-shadow: 0 0 20px white;
+  height: 100vh;
+  transition: all 1s;
+  /* display: none; */
+}
+
+section.create input{
+  padding: 12px;
+  background: transparent;
+  border: 1.8px solid #fff;
+  width: 100%;
+  border-radius: 3px;
+  color: white;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+section.create input:first-child{
+  margin-top: 20px;
+}
+
+::placeholder{
+  color: white;
+}
+
+button#generate{
+  padding: 12px;
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: 1.7px solid white;
+  /* margin-top: 10px; */
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.information_generate button:hover{
+  background: #fff;
+  color: #000;
+}
+
+.information_generate{
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+}
+
+
+/* adding css code for the section join */
+
+section.join{
+  padding: 20px;
+  color: white;
+  height: 100vh;
+  /* display: none; */
+}
+
+.h2{
+  text-shadow: 0 0 20px white;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.join input{
+  padding: 10px;
+  border: 1.5px solid #fff;
+  width: 100%;
+  background: transparent;
+  font-size: 1em;
+  border-radius: 4px;
+  outline: none;
+}
+
+.join button{
+  padding: 10px;
+  border: 1.5px solid #fff;
+  width: 100%;
+  background: transparent;
+  font-size: 1em;
+  border-radius: 4px;
+  margin-top: 15px;
+  color: white;
+}
+
+
+/* adding css code for settings section */
+
+section.settings{
+  padding: 20px;
+  color: white;
+  height: 100vh;
+}
+
+section.settings h2{
+  font-weight: 500;
+  text-shadow: 0 0 20px white;
+}
+
+div.profile{
+  margin-top: 15px;
+  background: rgba(65, 64, 53, 1);
+  padding: 10px;
+  height: fit-content;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+div.profile .profileDiv{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.settings li{
+  list-style: none;
+  padding: 10px;
+  background: rgba(65, 64, 53, 1);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* adding css code for the success prompt */
+
+.success_alert{
+  padding: 10px;
+  background: rgba(163, 226, 90, 1);
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 400px;
+  display: flex;
+  border-left: 6px solid green;
+  gap: 10px;
+  display: none;
+}
+
+.success_alert .done{
+  width: 40px;
+  transform: translateY(5px);
+}
+.success_alert .close{
+  width: 35px;
+}
+
+.success_alert .close_span{
+  transform: translateY(7px);
+}
+
+.success_alert .alert_text{
+  font-size: 16px;
+  transform: translateY(12px);
+}
+
+.success_alert.show{
+  animation: animate 1s ease forwards;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateX(400px);
+  }
+  25%{
+    transform: translateX(-15px);
+  }
+  50%{
+    transform: translateX(15px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.success_alert.hide{
+  animation: animate2 1s ease forwards;
+}
+
+@keyframes animate2{
+  0%{
+    transform: translateX(0px);
+  }
+  25%{
+    transform: translateX(15px);
+  }
+  50%{
+    transform: translateX(-15px);
+  }
+  100%{
+    transform: translateX(400px);
+    display: none;
+  }
+}
